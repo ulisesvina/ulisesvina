@@ -7,6 +7,8 @@ I've been programming since I'm 9! My first (scripting) language was Batch. If y
 - 🔭  | I start new crazy projects all the time here on GitHub
 - 📫  | You can reach me on [Instagram](https://www.instagram.com/ulisesvina/)
 
+Sidenote (in Spanish, **NOT** relevant for employers): Ranon me roba todos los proyectos que hice, o quiero hacer pero nunca subí a GitHub para después hacerlos con código spaghetti de mierda en Golang.
+
 ## 📈 Statistics
 
 ![Statistics](https://metrics.lecoq.io/ulisesvina?template=classic&languages=1&config.timezone=America%2FMexico_City&config.animated=true)
