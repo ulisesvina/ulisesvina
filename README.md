@@ -19,7 +19,7 @@ I've been programming since I'm 9! My first (scripting) language was Batch. If y
 - Portuguese (A1)
 - Finalist in iWeek Hackathon, organized by the innovation department of Chihuahua, Mexico
 - Participant in Wordpress Puebla Meetups
-- Studying Harvard's CS50
+- Studying Harvard's CS50 Computer Science course.
 
 ## ⚡ Skills
 
