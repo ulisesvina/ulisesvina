@@ -17,8 +17,8 @@ I've been programming since I'm 9! My first (scripting) language was Batch. If y
 
 - 5+ years on programming
 - Spanish (Native)
-- English (B2)
-- Portuguese (A1)
+- English (C1)
+- Portuguese (A2)
 - Finalist in iWeek Hackathon, organized by the innovation department of Chihuahua, Mexico
 - Participant in Wordpress Puebla Meetups
 - Studying Harvard's CS50 Computer Science course.
