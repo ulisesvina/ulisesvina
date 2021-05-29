@@ -2,11 +2,11 @@
 
 Olá, sou Ulises. <br />
 
-¡Programo desde que eu tenho 9! Meu primeiro língua (de scripts) foi o Batch.<br />
-Se você quer començar um rascunho novo, sempre estou acessível para programar contigo.
+¡Programo desde que eu tinha 9! Minha primeira línguaguem (de scripts) foi o Batch.<br />
+Se você quiser começar um rascunho novo, sempre estou acessível para programar contigo.
 
-- 🔭  | Começo rascunhos todo o tempo aquí em GitHub
-- 📫  | Você pode contata-me em [Instagram](https://www.instagram.com/ulisesvina/)
+- 🔭  | Começo rascunhos o tempo todo aqui no GitHub
+- 📫  | Você pode contactar-me no Instagram [Instagram](https://www.instagram.com/ulisesvina/)
 
 ## 📈 Estatisticas (Em Inglês)
 
