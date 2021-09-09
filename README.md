@@ -13,12 +13,13 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 
 ## 🧑🏼‍💻 Experience
 
-- 5+ years on programming
+- 6+ years on programming
 - Spanish (Native)
 - English (C1)
 - Portuguese (A2)
 - Finalist in iWeek Hackathon, organized by the innovation department of Chihuahua, Mexico
-- Participant in Wordpress Puebla Meetups
+- Semifinalist in Talent Land Hackahton, organized by Jalisco's government.
+- Former participant in Wordpress Puebla Meetups
 - Studying Harvard's CS50 Computer Science course.
 
 ## ⚡ Skills
