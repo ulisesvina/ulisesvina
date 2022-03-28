@@ -1,6 +1,8 @@
 :root {
   font-size: 12px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #000;
+  --acent: #161616;
 }
 
 body {
@@ -63,15 +65,14 @@ h1,h2,h3,h4,h5,h6 { font-weight: normal; display: inline-block; margin: 0; }
 .button-secondary {
   display: inline-block;
   font-size: 18px;
-  color: #000;
   font-weight: bold;
   font-variant: italic;
   padding: 0.75em 1.5em;
   border-radius: 50px;
   outline: none;
-  border: 0.25px solid #161616;
+  color: var(--acent);
+  border: 0.25px solid var(--acent);
   cursor: pointer;
-  background: #fff;
   margin: 15px;
 }
 
@@ -138,4 +139,9 @@ h6 {
     row-gap: 50px;
     flex-direction: column;
   }
+}
+
+a {
+  text-decoration: none;
+  color: var(--acent);
 }
