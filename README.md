@@ -7,6 +7,38 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 - 🔭  | I start new crazy projects all the time here on GitHub
 - 📫  | You can reach me on [Instagram](https://www.instagram.com/quique.rangel.xd/)
 
+## 💻 Gear
+**Thinkpad L440** (active)
+- Intel Core i3-4000M (2) @ 2.4GHz
+- 12GB LDDR3 1600MHz
+- 128GB SATA III Kingston SSD
+- 1TB SATA III Western Digital Blue 5400RPM 2.5"
+- Ubuntu 20.04
+
+**iPhone 8** (active)
+- Apple A11 Bionic (6) @ 2.3GHz
+- 2GB no type specified memory
+- 64GB NVMe Samsung SSD
+- iOS 15.4.1
+
+**Raspberry Pi 4** (unused)
+- Broadcom BCM2711 SoC (4) @ 2.0GHz
+- 16GB SanDisk eMMC
+- 2GB SDRAM
+- Raspbian (32-bits)
+
+**Motorola One (deen)** (active) <- NOT BEING USED AS PHONE
+- Qualcomm Snapdragon 625 (8)@ 2.0GHz
+- 64GB MICRON eMMC
+- 4GB no type specified memory
+- Android 11 -> Ubuntu 18.04 (in chroot enviroment)
+
+**Custom build** (unused)
+- Intel Pentium E5200 (2) @ 2.5GHz
+- 2GB DDR2 200MHz
+- 1TB SATA II Seagate Momentus 5400RPM 2.5"
+- Windows 7
+
 ## 📈 Statistics
 
 ![Statistics](https://metrics.lecoq.io/ulisesvina?template=classic&languages=1&config.timezone=America%2FMexico_City&config.animated=true)
