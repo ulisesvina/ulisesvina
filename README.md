@@ -10,7 +10,7 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 ## 💻 Gear
 <details>
   <summary>Click to expand!</summary>
-  <br/>
+  
 **Thinkpad L440** (active)
 - Intel Core i3-4000M (2) @ 2.4GHz
 - 12GB LDDR3 1600MHz
