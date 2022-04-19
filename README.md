@@ -5,7 +5,7 @@ Hi, I'm Ulises. I'm a 15-year old fullstack programmer, and National Autonomous 
 I've been programming since I was 9! My first (scripting) language was Batch. If you want to start a new project I'm always available to code with you!
 
 - 🔭  | I start new crazy projects all the time here on GitHub
-- 📫  | You can reach me on [Instagram](https://www.instagram.com/quique.rangel.xd/)
+- 📫  | You can reach me on [Instagram](https://www.instagram.com/ulisesvina)
 
 ## 💻 Gear
 <details>
