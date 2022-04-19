@@ -8,6 +8,9 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 - 📫  | You can reach me on [Instagram](https://www.instagram.com/quique.rangel.xd/)
 
 ## 💻 Gear
+<details>
+  <summary>Click to expand!</summary>
+  <br/>
 **Thinkpad L440** (active)
 - Intel Core i3-4000M (2) @ 2.4GHz
 - 12GB LDDR3 1600MHz
@@ -38,6 +41,7 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 - 2GB DDR2 200MHz
 - 1TB SATA II Seagate Momentus 5400RPM 2.5"
 - Windows 7
+</details>
 
 ## 📈 Statistics
 
