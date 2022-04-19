@@ -16,7 +16,7 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 - 12GB LDDR3 1600MHz
 - 128GB SATA III Kingston SSD
 - 1TB SATA III Western Digital Blue 5400RPM 2.5"
-- Ubuntu 20.04
+- Fedora 36 (Pre-release)
 
 **iPhone 8** (active)
 - Apple A11 Bionic (6) @ 2.3GHz
@@ -47,15 +47,16 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 
 ![Statistics](https://metrics.lecoq.io/ulisesvina?template=classic&languages=1&config.timezone=America%2FMexico_City&config.animated=true)
 
-## 🧑🏼‍💻 Experience
-
-- 6+ years on programming
+## 🌐 Spoken Languages
 - Spanish (Native)
 - English (C1)
 - Portuguese (A2)
+  
+## 🧑🏼‍💻 Experience
+
+- 6+ years on programming
+- Winner of the "Best use of Google Cloud" challenge in HeroHacks II
 - Finalist in iWeek Hackathon, organized by the innovation department of Chihuahua, Mexico
-- Semifinalist in Talent Land Hackahton, organized by Jalisco's government.
-- Former participant in Wordpress Puebla Meetups
 - Studying Harvard's CS50 Computer Science course.
 
 ## ⚡ Skills
