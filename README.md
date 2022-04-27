@@ -16,7 +16,7 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 - 12GB LDDR3 1600MHz
 - 128GB SATA III Kingston SSD
 - 1TB SATA III Western Digital Blue 5400RPM 2.5"
-- Fedora 36 (Pre-release)
+- Ubuntu 22.04 LTS
 
 **iPhone 8** (active)
 - Apple A11 Bionic (6) @ 2.3GHz
