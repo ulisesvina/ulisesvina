@@ -6,9 +6,7 @@ const Header = () => {
     return (
         <header className={styles["header"]}>
             <nav className={styles["navbar-container"]}>
-                <a href="/">
-                    <h1><b>Ulises Viña</b></h1>
-                </a>
+                    <h1><b><Link href="/">Ulises Viña</Link></b></h1>
                 <button
                     type="button"
                     id="navbar-toggle"
