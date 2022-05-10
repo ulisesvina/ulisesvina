@@ -1,0 +1,12 @@
+.header {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}

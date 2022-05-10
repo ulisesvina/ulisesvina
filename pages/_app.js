@@ -7,10 +7,9 @@ import splitbee from '@splitbee/web';
 const App = ({ Component, pageProps }) => {
   useEffect(() => {
     splitbee.init({
-      token: "C6694VHK2YHM",
-      disableCookie: true,
       scriptUrl: "https://cdn.splitbee.io/sb.js",
       apiUrl: "https://hive.splitbee.io",
+      token: "C6694VHK2YHM",
     });
   }, []);
 
