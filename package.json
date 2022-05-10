@@ -1,25 +1,21 @@
 {
   "name": "ulisesvina",
-  "version": "1.0.0",
-  "license": "GPL-3.0",
-  "author": {
-    "name": "Ulises Vina",
-    "email": "contacto@ulisesvina.me"
-  },
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "node_modules/next/dist/bin/next",
-    "build": "node_modules/next/dist/bin/next build",
-    "preview": "node_modules/next/dist/bin/next preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "^12.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "wouter": "^2.8.0-alpha.2"
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^1.0.7",
-    "vite": "^2.7.2"
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6"
   }
 }
