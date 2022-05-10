@@ -1,8 +1,19 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import '../styles/globals.css';
+import { useEffect } from 'react';
+import splitbee from '@splitbee/web';
 
 const App = ({ Component, pageProps }) => {
+  useEffect(() => {
+    splitbee.init({
+      token: "C6694VHK2YHM",
+      disableCookie: true,
+      scriptUrl: "https://cdn.splitbee.io/sb.js",
+      apiUrl: "https://hive.splitbee.io",
+    });
+  }, []);
+
   return (
     <div>
       <Head>

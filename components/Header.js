@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
-import '../styles/Header.module.css';
+import styles from '../styles/Header.module.css';
 
 const Header = () => {
     return (
-        <header>
-            <nav className="navbar-container">
+        <header className={styles["header"]}>
+            <nav className={styles["navbar-container"]}>
                 <a href="/">
                     <h1><b>Ulises Viña</b></h1>
                 </a>
@@ -19,9 +19,9 @@ const Header = () => {
                     <FaBars/>
                 </button>
                 <div id="navbar-menu" aria-labelledby="navbar-toggle">
-                <ul className="navbar-links">
+                <ul className={styles["navbar-links"]}>
                     <li className="navbar-item"><Link className="navbar-link" href="/">Home</Link></li>
-                    <li className="navbar-item"><Link className="navbar-link" href="/blog">About</Link></li>
+                    <li className="navbar-item"><Link className="navbar-link" href="/blog">Blog</Link></li>
                     <li className="navbar-item"><Link className="navbar-link" href="/contact">Contact</Link></li>
                 </ul>
 
