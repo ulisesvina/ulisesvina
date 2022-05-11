@@ -26,3 +26,9 @@ a, Link {
   color: inherit;
   text-decoration: none;
 }
+
+.icon { vertical-align: middle; }
+
+.center {
+  text-align: center;
+}
