@@ -49,7 +49,7 @@ const Home = () => {
     <div>
       <div className="center">
         <h2>I design <b className={styles["gradient-text"]}>{quotes[state.quote].substring(0, state.char)}</b> products.</h2><br/>
-        <h3>Hi! I'm Ulises, an experienced fullstack developer focused on low-level.</h3>
+        <h3>Hi! I&apos;m Ulises, an experienced fullstack developer focused on low-level.</h3>
       </div>
       {
         data["isPlaying"] ? <p><FaSpotify className={`${styles["spotify-icon"]} icon`}/> Now playing <b>{data.songName}</b> by <b>{data.artist} ✨</b></p> : <p><BiNoEntry className={`${styles["no-entry-icon"]} icon`}/> Currently not playing any song.</p>
