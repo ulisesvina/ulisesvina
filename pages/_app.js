@@ -9,7 +9,7 @@ const App = ({ Component, pageProps }) => {
     splitbee.init({
       scriptUrl: "https://cdn.splitbee.io/sb.js",
       apiUrl: "https://hive.splitbee.io",
-      token: "C6694VHK2YHM",
+      token: "0F91SINVCVMX",
     });
   }, []);
 
