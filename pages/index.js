@@ -64,7 +64,7 @@ const Home = () => {
         </p>
       </div>
       <div className="flex justify-center mb-10">
-        <a href="https://cv.ulisesvina.me" target="_blank">
+        <a href="https://cv.ulisesvina.me" target="_blank" rel="noreferrer noopener">
           <button className="mt-5 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full mr-4">
             <BiBookBookmark className="icon" /> Get my resume
           </button>
