@@ -1,9 +1,13 @@
 const Contact = () => {
     return (
-        <div>
-            <h2>Contact</h2>
+        <div className="container">
+        <p className="text-3xl mb-3">Contact</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quidem, quisquam.
+        </p>
         </div>
-    )
+    );
 }
 
 export default Contact;

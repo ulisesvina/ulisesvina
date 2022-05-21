@@ -1,32 +1,56 @@
-import Link from 'next/link';
-import { FaBars } from 'react-icons/fa';
-import styles from '../styles/Header.module.css';
+import { useRef } from "react";
+import { FaBars } from "react-icons/fa";
+import Link from "next/link";
 
 const Header = () => {
-    return (
-        <header className={styles["header"]}>
-            <nav className={styles["navbar-container"]}>
-                    <h1><b><Link href="/">Ulises Viña</Link></b></h1>
-                <button
-                    type="button"
-                    id="navbar-toggle"
-                    aria-controls="navbar-menu"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false"
-                >
-                    <FaBars/>
-                </button>
-                <div id="navbar-menu" aria-labelledby="navbar-toggle">
-                <ul className={styles["navbar-links"]}>
-                    <li className="navbar-item"><Link className="navbar-link" href="/">Home</Link></li>
-                    <li className="navbar-item"><Link className="navbar-link" href="/blog">Blog</Link></li>
-                    <li className="navbar-item"><Link className="navbar-link" href="/contact">Contact</Link></li>
-                </ul>
+  const navRef = useRef(null);
 
-                </div>
-            </nav>
-        </header>
-    )
-}
+  const collapse = () => {
+    navRef.current.classList.toggle("hidden");
+  };
+
+  return (
+    <header className="top-0 sticky p-8 bg-white">
+      <div className="flex items-center justify-between flex-wrap">
+        <div className="flex-shrink-0 lg:mr-6">
+          <Link href="/">
+            <span className="text-3xl font-bold">Ulises Viña</span>
+          </Link>
+        </div>
+        <div className="block lg:hidden">
+          <button
+            onClick={collapse}
+            className="px-3 py-2 border rounded border-white-400"
+            aria-label="Toggle navigation"
+          >
+            <FaBars />
+          </button>
+        </div>
+        <nav
+          ref={navRef}
+          className="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden"
+        >
+          <ul className="lg:flex-grow">
+            <li className="lg:inline-block">
+              <Link href="/">
+                <a className="block mt-4 lg:inline mr-4 lg:mt-0">Home</a>
+              </Link>
+            </li>
+            <li className="lg:inline-block">
+              <Link href="/blog">
+                <a className="block mt-4 lg:inline mr-4 lg:mt-0">Blog</a>
+              </Link>
+            </li>
+            <li className="lg:inline-block">
+              <Link href="/contact">
+                <a className="block mt-4 lg:inline lg:mt-0">Contact</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+};
 
 export default Header;
