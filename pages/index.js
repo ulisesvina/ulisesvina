@@ -13,7 +13,19 @@ const fetchNowPlaying = (setData) => {
     .catch((error) => error);
 };
 
-const Home = () => {
+export const getServerSideProps = async () => {
+  let data = await fetch("https://api.github.com/users/ulisesvina/repos").then(
+    (response) => response.json()
+  );
+
+  if (data.length > 5) {
+    data = data.slice(0, 5);
+  }
+
+  return { props: { ghrepos: data } };
+};
+
+const Home = ({ ghrepos }) => {
   const [data, setData] = useState({ isPlaying: false }),
     [typed, setTyped] = useState(""),
     quotes = ["innovative", "useful", "amazing", "inspiring"];
@@ -35,21 +47,14 @@ const Home = () => {
 
   useEffect(() => {
     setInterval(async () => {
-      if (char > quotes[quote].length) {
-        await new Promise((r) => setTimeout(r, 1000));
-        quote = quote == 3 ? 0 : quote + 1;
-        setTyped(quotes[quote].charAt(0));
-        char = 1;
-      } else {
-        setTyped(quotes[quote].substring(0, char));
-        char++;
-      }
-    }, 150);
+      setTyped(quotes[quote]);
+      quote = quote == 3 ? 0 : quote + 1
+    }, 1500);
   }, []);
 
   return (
     <div className="container">
-      <div className="text-center mt-3 mb-5">
+      <div className="text-center mt-3 mb-5 static">
         <p className="text-3xl">
           I design{" "}
           <b>
@@ -64,7 +69,11 @@ const Home = () => {
         </p>
       </div>
       <div className="flex justify-center mb-10">
-        <a href="https://cv.ulisesvina.me" target="_blank" rel="noreferrer noopener">
+        <a
+          href="https://cv.ulisesvina.me"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <button className="mt-5 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full mr-4">
             <BiBookBookmark className="icon" /> Get my resume
           </button>
@@ -85,6 +94,20 @@ const Home = () => {
           <BiNoEntry className="text-red-400 icon" /> Currently not playing any
           song.
         </p>
+      )}
+      <p className="text-3xl mt-10 mb-5">Projects</p>
+      {ghrepos.length === 0 ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="flex flex-wrap">
+          {ghrepos?.map((repo) => (
+            <a href={repo.html_url} target="_blank" rel="noreferrer noopener">
+              <div className="flex-1 rounded-md p-2 text-md text-center text-white bg-blue-500 mr-5 mb-5">
+                <button>{repo.name}</button>
+              </div>
+            </a>
+          ))}
+        </div>
       )}
     </div>
   );
