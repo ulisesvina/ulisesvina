@@ -101,7 +101,7 @@ const Home = ({ ghrepos }) => {
       ) : (
         <div className="flex flex-wrap">
           {ghrepos?.map((repo) => (
-            <a href={repo.html_url} target="_blank" rel="noreferrer noopener">
+            <a href={repo.html_url} key={repo.id} target="_blank" rel="noreferrer noopener">
               <div className="flex-1 rounded-md p-2 text-md text-center text-white bg-blue-500 mr-5 mb-5">
                 <button>{repo.name}</button>
               </div>
