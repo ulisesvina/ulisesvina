@@ -63,6 +63,7 @@ const App = ({ Component, pageProps }) => {
           sizes="180x180"
           href="/apple-touch-icon-180x180.png"
         />
+        <link rel="manifest" href="/meta/manifest.json" />
         <title>Ulises Viña</title>
       </Head>
       <Header />
