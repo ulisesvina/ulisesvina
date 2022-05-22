@@ -22,10 +22,18 @@ const handler = async (req, res) => {
     });
 
     let info = await transporter.sendMail({
-      from: `"Portfolio Contact Form" <${process.env["EMAIL_USER"]}>`,
+      from: `"Contact form" <${process.env["EMAIL_USER"]}>`,
       to: "contacto@ulisesvina.me",
       subject: req.body.subject,
       text: req.body.message,
+      html: `
+      <h3>New inquiry from</h3>
+      <h1>${req.body.firstName} ${req.body.lastName}</h1> <br />
+      <b>Reply to:</b> <a href="mailto:${req.body.email}">${req.body.email}</a> <br />
+      <div style="margin-top: 60px">
+        <p>${req.body.message}</p>
+      </div>
+      `
     });
 
     return res.status(200).json({
