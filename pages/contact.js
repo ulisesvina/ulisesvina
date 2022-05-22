@@ -1,44 +1,55 @@
-import { useRef } from "react";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
-  const hcaptchaRef = useRef(),
-    onHCaptchaChange = (token) => {
-        if(!token) {
-            return;
-        }
-        hcaptchaRef.current.reset();
-    },
-    sendMail = async (e) => {
-      e.preventDefault();
-      const form = e.target,
-        info = {
-          firstName: form["first-name"].value,
-          lastName: form["last-name"].value,
-          email: form.email.value,
-          message: form.message.value,
-          subject: form.subject.value,
-        };
+  let data;
+  const recaptchaRef = useRef(),
+    handleChange = (token) => {
+      if (!token) {
+        return;
+      }
+      recaptchaRef.current.reset();
+      data["token"] = token;
 
       fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(info),
+        body: JSON.stringify(data),
       })
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          form.reset();
         });
+    },
+    handleSubmit = async (e) => {
+      e.preventDefault();
+
+      const form = e.target;
+      data = {
+        firstName: form["first-name"].value,
+        lastName: form["last-name"].value,
+        email: form.email.value,
+        message: form.message.value,
+        subject: form.subject.value,
+      };
+
+      form.reset();
+      recaptchaRef.current.execute();
     };
 
   return (
     <div className="container">
       <p className="font-bold text-4xl">Contact</p>
       <div className="p-6">
-        <form onSubmit={sendMail}>
+        <form onSubmit={handleSubmit}>
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            size="invisible"
+            sitekey="6LfXTAsgAAAAALMeR-8E52S4Mt1dVM3ZHgLObkAK"
+            onChange={handleChange}
+          />
           <div className="grid grid-cols-2 gap-4">
             <div className="flex flex-col">
               <label htmlFor="first-name">First name</label>
@@ -94,13 +105,6 @@ const Contact = () => {
                 required
               />
             </div>
-            <HCaptcha
-              id="test"
-              size="invisible"
-              ref={hcaptchaRef}
-              sitekey={process.env["HCAPTCHA_SITE_KEY"]}
-              onVerify={onHCaptchaChange}
-            />
           </div>
           <div className="flex justify-end py-4">
             <button className="mt-5 bg-blue-500 hover:bg-blue-700 text-xl text-white py-2 px-4 rounded-full">
