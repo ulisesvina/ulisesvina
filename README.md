@@ -18,6 +18,12 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 - 1TB SATA III Western Digital Blue 5400RPM 2.5"
 - macOS Monterey 
 
+**Google Pixel 4** (active)
+- Qualcomm Snapdragon 855 (8) @ 2.84/2.42/1.80GHz
+- 6GB unspecified
+- 64GB UFS 2.1
+- Android 12.1 (stock)
+
 **iPhone 8** (active)
 - Apple A11 Bionic (6) @ 2.3GHz
 - 2GB no type specified memory
@@ -30,7 +36,7 @@ I've been programming since I was 9! My first (scripting) language was Batch. If
 - 2GB SDRAM
 - Raspbian (32-bits)
 
-**Motorola One (deen)** (active) <- NOT BEING USED AS PHONE
+**Motorola One (deen)** (active)
 - Qualcomm Snapdragon 625 (8)@ 2.0GHz
 - 64GB MICRON eMMC
 - 4GB no type specified memory
