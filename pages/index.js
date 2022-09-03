@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaSpotify } from "react-icons/fa";
+import { BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
 import { BiNoEntry, BiBookBookmark } from "react-icons/bi";
 import { FiMail } from "react-icons/fi";
 import Link from "next/link";
@@ -47,7 +48,7 @@ const Home = ({ ghrepos }) => {
   useEffect(() => {
     setInterval(async () => {
       setTyped(quotes[quote]);
-      quote = quote == 3 ? 0 : quote + 1
+      quote = quote == 3 ? 0 : quote + 1;
     }, 1500);
   }, []);
 
@@ -67,7 +68,7 @@ const Home = ({ ghrepos }) => {
           low-level.
         </p>
       </div>
-      <div className="flex justify-center mb-10">
+      <div className="flex justify-center">
         <a
           href="https://cv.ulisesvina.me"
           target="_blank"
@@ -82,6 +83,37 @@ const Home = ({ ghrepos }) => {
             <FiMail className="icon" /> Get in touch
           </button>
         </Link>
+      </div>
+      <div className="flex justify-center mt-10 mb-5">
+        <ul>
+          <li className="inline-block p-4">
+            <a
+              href="https://instagram.com/ulisesvina"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <BsInstagram className="icon-social" size={35} />
+            </a>
+          </li>
+          <li className="inline-block p-4">
+            <a
+              href="https://twitter.com/ulisesvina"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <BsTwitter className="icon-social" size={35} />
+            </a>
+          </li>
+          <li className="inline-block p-4">
+            <a
+              href="https://github.com/ulisesvina"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <BsGithub className="icon-social" size={35} />
+            </a>
+          </li>
+        </ul>
       </div>
       {data["isPlaying"] ? (
         <p>
@@ -98,11 +130,20 @@ const Home = ({ ghrepos }) => {
       {ghrepos.length === 0 ? (
         <p>Loading...</p>
       ) : (
-        <div className="flex flex-wrap">
+        <div className="w-full">
           {ghrepos?.map((repo) => (
-            <a href={repo.html_url} key={repo.id} target="_blank" rel="noreferrer noopener">
-              <div className="flex-1 rounded-md p-2 text-md text-center text-white bg-blue-500 hover:bg-blue-700 mr-5 mb-5">
-                <button>{repo.name}</button>
+            <a
+              href={repo.html_url}
+              key={repo.id}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <div className="mb-5">
+                <p>
+                  <span className="text-xl">{repo.name} </span>
+                  <span className="text-sm">(view on <BsGithub className="icon"/> GitHub)</span>
+                </p>
+                <h5 className="text-md">{repo.description}</h5>
               </div>
             </a>
           ))}

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../styles/globals.css";
 import { useEffect } from "react";
 import splitbee from "@splitbee/web";
@@ -66,8 +67,11 @@ const App = ({ Component, pageProps }) => {
         <link rel="manifest" href="/meta/manifest.json" />
         <title>Ulises Viña</title>
       </Head>
-      <Header />
-      <Component {...pageProps} />
+      <div className="parent-div">
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </div>
     </>
   );
 };

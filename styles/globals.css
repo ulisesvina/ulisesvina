@@ -32,13 +32,29 @@ header {
 }
 
 .gradient-text {
-  background: linear-gradient(75deg,#42B7F2, #7622D5);
+  background: linear-gradient(75deg, #42b7f2, #7622d5);
   color: transparent;
   -webkit-background-clip: text;
   background-size: 100%;
   background-repeat: repeat;
   background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-}  
+}
+
+.icon-social {
+  color: #161616;
+}
+
+.icon-social:hover {
+  transition: color 300ms;
+  color: #747474;
+}
+
+.parent-div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
