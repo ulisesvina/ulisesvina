@@ -22,7 +22,7 @@ const handler = async (req, res) => {
     });
 
     let info = await transporter.sendMail({
-      from: `"Contact form" <${process.env["EMAIL_USER"]}>`,
+      from: `"Contact Form" <${process.env["EMAIL_USER"]}>`,
       to: "contacto@ulisesvina.me",
       subject: req.body.subject,
       text: req.body.message,
@@ -35,6 +35,8 @@ const handler = async (req, res) => {
       </div>
       `
     });
+
+    console.log(info)
 
     return res.status(200).json({
       message: "Email sent",

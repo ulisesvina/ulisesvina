@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
@@ -42,7 +42,7 @@ const Contact = () => {
   return (
     <div className="container">
       <p className="font-bold text-4xl">Contact</p>
-      <div className="p-6">
+      <div className="mt-10">
         <form onSubmit={handleSubmit}>
           <ReCAPTCHA
             ref={recaptchaRef}
@@ -50,31 +50,31 @@ const Contact = () => {
             sitekey="6LfXTAsgAAAAALMeR-8E52S4Mt1dVM3ZHgLObkAK"
             onChange={handleChange}
           />
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-2">
             <div className="flex flex-col">
               <label htmlFor="first-name">First name</label>
               <input
                 type="text"
                 name="first-name"
-                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="last-name">Last name</label>
+            <label htmlFor="last-name">Last Name</label>
               <input
                 type="text"
                 name="last-name"
-                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
-            <div className="flex flex-col">
-              <label htmlFor="email">Email</label>
+            <div className="flex flex-col col-span-2">
+              <label htmlFor="subject">Email</label>
               <input
                 type="email"
                 name="email"
-                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -83,7 +83,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="subject"
-                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
