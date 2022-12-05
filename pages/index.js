@@ -44,13 +44,11 @@ const Home = ({ ghrepos }) => {
     }, 10000);
     return () => clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    setInterval(async () => {
-      setTyped(quotes[quote]);
-      quote = quote == 3 ? 0 : quote + 1;
-    }, 1500);
-  }, []);
+  
+  setInterval(async () => {
+    setTyped(quotes[quote]);
+    quote = quote == 3 ? 0 : quote + 1;
+  }, 1500);
 
   return (
     <div className="container">
