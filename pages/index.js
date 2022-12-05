@@ -42,13 +42,35 @@ const Home = ({ ghrepos }) => {
     const interval = setInterval(() => {
       fetchNowPlaying(setData);
     }, 10000);
+const Home = ({ ghrepos }) => {
+  const [data, setData] = useState({ isPlaying: false }),
+    [quotes, setQuotes] = useState(["innovative", "useful", "amazing", "inspiring"]),
+    [typed, setTyped] = useState("");
+  let fetched = false,
+    quote = 0;
+
+  useEffect(() => {
+    if (!fetched) {
+      fetchNowPlaying(setData);
+      fetched = true;
+    }
+
+    const interval = setInterval(() => {
+      fetchNowPlaying(setData);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
-  
-  setInterval(async () => {
-    setTyped(quotes[quote]);
-    quote = quote == 3 ? 0 : quote + 1;
-  }, 1500);
+
+  useEffect(() => {
+    setInterval(async () => {
+      setTyped(quotes[quote]);
+      setQuotes(prevQuotes => {
+        let newQuotes = [...prevQuotes];
+        quote = quote == 3 ? 0 : quote + 1;
+        return newQuotes;
+      });
+    }, 1500);
+  }, []);
 
   return (
     <div className="container">
@@ -58,7 +80,6 @@ const Home = ({ ghrepos }) => {
           <b>
             <span className="gradient-text">{typed}</span>
           </b>{" "}
-          products
         </p>
         <br />
         <p className="mt-1 text-xl">
