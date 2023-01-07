@@ -4,7 +4,7 @@ Hello! I'm Ulises, a 16-year old programmer and student at the National Autonomo
 
 I am a winner of the "Best use of Google Cloud" challenge at HeroHacks II and a finalist in the iWeek Hackathon organized by the innovation department of Chihuahua, Mexico. I am currently enrolled in Harvard's CS50 Computer Science course.
 
-In my spare time, I enjoy starting new projects on GitHub and can be reached via email (contacto@ulisesvina.me)[mailto://contacto@ulisesvina.me] and (LinkedIn)[https://www.linkedin.com/in/ulises-vi%C3%B1a-20ba61203/]
+In my spare time, I enjoy starting new projects on GitHub and can be reached via email <contacto@ulisesvina.me> and [LinkedIn](https://www.linkedin.com/in/ulises-vi%C3%B1a-20ba61203/)
 
 ## 🌐 Spoken Languages
 - Spanish (Native)
