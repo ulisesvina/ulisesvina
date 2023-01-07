@@ -1,6 +1,6 @@
 ## 👾 Introduction
 
-Hello! I'm Ulises, a 16-year old programmer and student at the National Autonomous University of Mexico (UNAM). I have been programming for over 6 years, starting with Batch at the age of 9. I am highly skilled in a variety of programming languages, including JavaScript, Node.js, HTML, Lua, Go, C, PHP, CSS, React, Bootstrap, MySQL, and jQuery.
+Hello! I'm Ulises, a 16-year old programmer and student at the National Autonomous University of Mexico (UNAM). I have been programming for over 6 years, starting with Batch at the age of 9. I am highly skilled in a variety of programming languages, including JavaScript, Node.js, HTML, Lua, Assembly x86, C, Typescript, CSS, React, TailwindCSS, PostgreSQL, and Docker.
 
 I am a winner of the "Best use of Google Cloud" challenge at HeroHacks II and a finalist in the iWeek Hackathon organized by the innovation department of Chihuahua, Mexico. I am currently enrolled in Harvard's CS50 Computer Science course.
 
