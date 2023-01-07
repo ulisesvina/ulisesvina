@@ -1,46 +1,25 @@
 ## 👾 Introduction
 
-Hi, I'm Ulises. I'm a 16-year old fullstack programmer, and National Autonomous University of Mexico (UNAM) student.<br />
+Hello! I'm Ulises, a 16-year old programmer and student at the National Autonomous University of Mexico (UNAM). I have been programming for over 6 years, starting with Batch at the age of 9. I am highly skilled in a variety of programming languages, including JavaScript, Node.js, HTML, Lua, Go, C, PHP, CSS, React, Bootstrap, MySQL, and jQuery.
 
-I've been programming since I was 9! My first (scripting) language was Batch. If you want to start a new project I'm always available to code with you!
+I am a winner of the "Best use of Google Cloud" challenge at HeroHacks II and a finalist in the iWeek Hackathon organized by the innovation department of Chihuahua, Mexico. I am currently enrolled in Harvard's CS50 Computer Science course.
 
-- 🔭  | I start new crazy projects all the time here on GitHub
-- 📫  | You can reach me on [Instagram](https://www.instagram.com/ulisesvina)
-
-## 💻 Gear
-<details>
-  <summary>Click to expand!</summary>
-  
-**Thinkpad L440** (active)
-- Intel Core i3-4000M (2) @ 2.4GHz
-- 12GB LDDR3 1600MHz
-- 128GB SATA III Kingston SSD
-- 1TB SATA III Western Digital Blue 5400RPM 2.5"
-- Arch Linux
-
-**Google Pixel 4** (active)
-- Qualcomm Snapdragon 855 (8) @ 2.84/2.42/1.80GHz
-- 6GB SK Hynix LPDDR4X
-- 128 Toshiba UFS 2.1
-- Android 13 (CalyxOS)
-
-</details>
-
-## 📈 Statistics
-
-![Statistics](https://metrics.lecoq.io/ulisesvina?template=classic&languages=1&config.timezone=America%2FMexico_City&config.animated=true)
+In my spare time, I enjoy starting new projects on GitHub and can be reached via email (contacto@ulisesvina.me)[mailto://contacto@ulisesvina.me] and (LinkedIn)[https://www.linkedin.com/in/ulises-vi%C3%B1a-20ba61203/]
 
 ## 🌐 Spoken Languages
 - Spanish (Native)
 - English (C1)
 - Portuguese (A2)
   
-## 🧑🏼‍💻 Experience
+## 📚 Education
 
-- 6+ years on programming
-- Winner of the "Best use of Google Cloud" challenge in HeroHacks II
-- Finalist in iWeek Hackathon, organized by the innovation department of Chihuahua, Mexico
-- Studying Harvard's CS50 Computer Science course.
+- Enrolled in Harvard's CS50x
+- Class of 2024 at Escuela Nacional Preparatoria (ENP) - UNAM.
+
+## 🧑🏼‍💻 Awards and Recognition
+- Winner of the "Best use of Google Cloud" challenge at HeroHacks II
+- Winner of the "Mom's Spaghetti" challenge at Hack or Treat II
+- Finalist in the iWeek Hackathon organized by the innovation department of Chihuahua, Mexico
 
 ## ⚡ Skills
 
