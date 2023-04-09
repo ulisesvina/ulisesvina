@@ -5,16 +5,15 @@ const Blog = ({ data }) => {
       {data.map((article, index) => (
         <div
           key={index}
-          className="w-full secondary-bg secondary-text rounded p-4 m-5"
+          className="w-full secondary-bg secondary-text rounded p-4 my-5"
         >
           <h3 className="text-xl">{article.title}</h3>
           <p className="text-sm mb-2">{article.description}</p>
-          <button className="mt-4 p-2 rounded-md bg-primary tertiary-text tertiary-bg w-full">
+          <button className="hover:underline mt-4 p-2 rounded-md bg-primary tertiary-text tertiary-bg w-full">
             <a
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline"
             >
               Read more...
             </a>
