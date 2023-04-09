@@ -9,15 +9,11 @@ const Blog = ({ data }) => {
         >
           <h3 className="text-xl">{article.title}</h3>
           <p className="text-sm mb-2">{article.description}</p>
-          <button className="hover:underline mt-4 p-2 rounded-md bg-primary tertiary-text tertiary-bg w-full">
-            <a
-              href={article.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <a href={article.url} target="_blank" rel="noopener noreferrer">
+            <button className="hover:underline mt-4 p-2 rounded-md bg-primary tertiary-text tertiary-bg w-full">
               Read more...
-            </a>
-          </button>
+            </button>
+          </a>
         </div>
       ))}
     </div>
