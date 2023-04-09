@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { Analytics } from '@vercel/analytics/react';
 import { MusicProvider } from "@/context/MusicProvider";
 
 import Head from "next/head";
@@ -19,6 +20,7 @@ const App = ({ Component, pageProps }) => {
           <MusicProvider>
             <Component {...pageProps} />
           </MusicProvider>
+          <Analytics/>
         </div>
         <Footer />
       </div>
