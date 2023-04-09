@@ -7,6 +7,7 @@ export const useMusic = () => useContext(MusicContext);
 
 export const MusicProvider = ({ children }) => {
   const [music, setMusic] = useState({ isPlaying: false });
+  const [fetched, setFetched] = useState(false);
 
   const musicLogic = () => {
     fetch("/api/now-playing")
@@ -87,7 +88,12 @@ export const MusicProvider = ({ children }) => {
       });
   };
 
-  useEffect(() => { musicLogic(); }, []);
+  useEffect(() => {
+    if (!fetched) {
+      musicLogic();
+      setFetched(true);
+    }
+  }, [fetched]);
 
   useEffect(() => {
     const interval = setInterval(musicLogic, 60000);
@@ -95,8 +101,6 @@ export const MusicProvider = ({ children }) => {
   }, [music]);
 
   return (
-    <MusicContext.Provider value={{ music }}>
-      {children}
-    </MusicContext.Provider>
+    <MusicContext.Provider value={{ music }}>{children}</MusicContext.Provider>
   );
 };
