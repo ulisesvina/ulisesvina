@@ -18,7 +18,7 @@ const Contact = () => {
         },
         body: JSON.stringify(data),
       })
-        .then((res) => res.json())
+        .then((res) => res.text())
         .then((data) => {
           console.log(data);
         });
@@ -28,11 +28,8 @@ const Contact = () => {
 
       const form = e.target;
       data = {
-        firstName: form["first-name"].value,
-        lastName: form["last-name"].value,
         email: form.email.value,
         message: form.message.value,
-        subject: form.subject.value,
       };
 
       form.reset();
@@ -51,39 +48,12 @@ const Contact = () => {
             onChange={handleChange}
           />
           <div className="grid grid-cols-2 gap-2">
-            <div className="flex flex-col">
-              <label htmlFor="first-name">First name</label>
-              <input
-                type="text"
-                name="first-name"
-                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-                required
-              />
-            </div>
-            <div className="flex flex-col">
-            <label htmlFor="last-name">Last Name</label>
-              <input
-                type="text"
-                name="last-name"
-                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-                required
-              />
-            </div>
             <div className="flex flex-col col-span-2">
               <label htmlFor="subject">Email</label>
               <input
                 type="email"
                 name="email"
-                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-                required
-              />
-            </div>
-            <div className="flex flex-col col-span-2">
-              <label htmlFor="subject">Subject</label>
-              <input
-                type="text"
-                name="subject"
-                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="mt-2 secondary-bg secondary-text shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -101,13 +71,13 @@ const Contact = () => {
                 rows="4"
                 type="text"
                 name="message"
-                className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="mt-2 secondary-bg secondary-text shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
           </div>
           <div className="flex justify-end py-4">
-            <button className="mt-5 bg-blue-500 hover:bg-blue-700 text-xl text-white py-2 px-4 rounded-full">
+            <button className="w-1/4 p-4 h-full rounded-xl tertiary-bg tertiary-text">
               Submit
             </button>
           </div>

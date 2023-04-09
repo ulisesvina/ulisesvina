@@ -1,34 +1,19 @@
-import Link from "next/link";
 import { BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
+
+import Links from "@/components/Links";
 
 const Footer = () => {
   return (
-    <footer className="mt-10 p-4 shadow md:p-6 bg-black">
+    <footer className="bottom-0 w-screen p-2 md:p-3 text-center mt-10 secondary-bg secondary-text">
       <div className="md:flex md:items-center md:justify-between">
-        <span className="text-sm text-white sm:text-center">
+        <span className="text-sm sm:text-center">
           © {new Date().getFullYear() + " "}
           Ulises Viña.
         </span>
-        <span className="text-white ml-2">Made with ❤️ in Mexico.</span>
-        <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 sm:mt-0">
-          <li className="lg:inline-block">
-            <Link href="/">
-              <a className="mr-4 hover:underline md:mr-6">Home</a>
-            </Link>
-          </li>
-          <li className="lg:inline-block">
-            <Link href="/blog">
-              <a className="mr-4 hover:underline md:mr-6">Blog</a>
-            </Link>
-          </li>
-          <li className="lg:inline-block">
-            <Link href="/contact">
-              <a className="mr-4 hover:underline md:mr-6">Contact</a>
-            </Link>
-          </li>
-        </ul>
+        <span>Made with ❤️ in Mexico.</span>
+        <Links />
       </div>
-      <div className="text-white mt-2 text-sm">
+      <div className="mt-2 text-sm">
         Licensed under the GNU General Public License version 3.0.
         <ul className="mt-2">
           <li className="inline-block p-2">

@@ -1,27 +1,56 @@
 import { getNowPlaying } from "../../lib/spotify";
 
-const notPlaying = (res) => {
-  return res.status(200).json({ isPlaying: false });
+export const config = {
+  runtime: "edge",
 };
 
-const handler = async (_, res) => {
-  const response = await getNowPlaying();
-
-  if (response.status === 204 || response.status > 400) notPlaying(res);
-
-  const song = await response.json();
-
-  if (song.item === null) notPlaying(res);
-
-  const artist = song.item.artists.map((_artist) => _artist.name).join(", ");
-  const songName = song.item.name;
-
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=60, stale-while-revalidate=30"
+const notPlaying = () =>
+  new Response(
+    JSON.stringify({
+      isPlaying: false,
+    }),
+    {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+        "cache-control": "public, s-maxage=60, stale-while-revalidate=30"
+      },
+    }
   );
 
-  return res.status(200).send({ isPlaying: true, artist, songName });
+const handler = async () => {
+  try {
+    const nowPlaying = await getNowPlaying();
+
+    if (nowPlaying.status !== 200) return notPlaying();
+
+    const song = await nowPlaying.json();
+
+    if (song.item === null) return notPlaying();
+
+    const artist = song.item.artists.map((_artist) => _artist.name).join(", "),
+      songName = song.item.name,
+      albumImage = song.item.album.images[0].url;
+
+    return new Response(
+      JSON.stringify({
+        isPlaying: true,
+        artist,
+        songName,
+        albumImage,
+      }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "Cache-Control": "public, s-maxage=60, stale-while-revalidate=30",
+        },
+      }
+    );
+  } catch (error) {
+    console.log(error);
+    return notPlaying();
+  }
 };
 
 export default handler;

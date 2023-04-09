@@ -11,7 +11,7 @@ const handler = async (req, res) => {
     }
   ).then((response) => response.json());
 
-  if(data.success) {
+  if (data.success) {
     const transporter = nodemailer.createTransport({
       host: process.env["EMAIL_SERVER"],
       port: 587,
@@ -24,19 +24,9 @@ const handler = async (req, res) => {
     let info = await transporter.sendMail({
       from: `"Contact Form" <${process.env["EMAIL_USER"]}>`,
       to: "contacto@ulisesvina.me",
-      subject: req.body.subject,
-      text: req.body.message,
-      html: `
-      <h3>New inquiry from</h3>
-      <h1>${req.body.firstName} ${req.body.lastName}</h1> <br />
-      <b>Reply to:</b> <a href="mailto:${req.body.email}">${req.body.email}</a> <br />
-      <div style="margin-top: 60px">
-        <p>${req.body.message}</p>
-      </div>
-      `
+      subject: "New inquiry from contact form.",
+      html: req.body.message.replace(/</g, "&lt;").replace(/>/g, "&gt;"),
     });
-
-    console.log(info)
 
     return res.status(200).json({
       message: "Email sent",

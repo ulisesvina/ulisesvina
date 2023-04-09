@@ -1,20 +1,19 @@
 import { useRef } from "react";
 import { FaBars } from "react-icons/fa";
+
+import Links from "@/components/Links";
 import Link from "next/link";
 
 const Header = () => {
-  const navRef = useRef(null);
-
-  const collapse = () => {
-    navRef.current.classList.toggle("hidden");
-  };
+  const navRef = useRef(null),
+    collapse = () => navRef.current.classList.toggle("hidden");
 
   return (
-    <header className="opacity-80 backdrop-blur-3xl top-0 sticky p-8 bg-white">
-      <div className="flex items-center justify-between flex-wrap">
-        <div className="flex-shrink-0 lg:mr-6">
-          <Link href="/">
-            <span className="text-3xl font-bold">Ulises Viña</span>
+    <header className="secondary-bg secondary-text p-2 fixed top-0 left-0 right-0 z-50">
+      <div className="container mx-auto flex items-center justify-between flex-wrap">
+        <div className="inline-block flex-shrink-0 text-2xl">
+          <Link href="/" className="no-underline">
+            <span className="secondary-text">Ulises Viña</span>
           </Link>
         </div>
         <div className="block lg:hidden">
@@ -28,25 +27,9 @@ const Header = () => {
         </div>
         <nav
           ref={navRef}
-          className="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden"
+          className="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto justify-end hidden"
         >
-          <ul className="lg:flex-grow">
-            <li onClick={collapse} className="lg:inline-block">
-              <Link href="/">
-                <a className="block mt-4 lg:inline mr-4 lg:mt-0">Home</a>
-              </Link>
-            </li>
-            <li onClick={collapse} className="lg:inline-block">
-              <Link href="/blog">
-                <a className="block mt-4 lg:inline mr-4 lg:mt-0">Blog</a>
-              </Link>
-            </li>
-            <li onClick={collapse} className="lg:inline-block">
-              <Link href="/contact">
-                <a className="block mt-4 lg:inline lg:mt-0">Contact</a>
-              </Link>
-            </li>
-          </ul>
+          <Links />
         </nav>
       </div>
     </header>
