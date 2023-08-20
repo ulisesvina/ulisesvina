@@ -1,8 +1,6 @@
 ## 👾 Introduction
 
-Hello! I'm Ulises, a 16-year old programmer and student at the National Autonomous University of Mexico (UNAM). I have been programming for over 6 years, starting with Batch at the age of 9. I am highly skilled in a variety of programming languages, including JavaScript, Lua, Assembly x86, C, Typescript, CSS, React, TailwindCSS, PostgreSQL, and Docker.
-
-I am a winner of the "Best use of Google Cloud" challenge at HeroHacks II and a finalist in the iWeek Hackathon organized by the innovation department of Chihuahua, Mexico. I am currently enrolled in Harvard's CS50 Computer Science course.
+Hi there! My name is Ulises. I am a 17-years-old fullstack developer, passionate hackathon tryhard and high school student at the National Autonomous University of Mexico. I am mostly into IT, networking, low-level and webdev, but I also enjoy embedded systems, CV and AI.
 
 In my spare time, I enjoy starting new projects on GitHub and can be reached via email <contacto@ulisesvina.me> and [LinkedIn](https://www.linkedin.com/in/ulises-vi%C3%B1a-20ba61203/)
 
@@ -10,16 +8,11 @@ In my spare time, I enjoy starting new projects on GitHub and can be reached via
 - Spanish (Native)
 - English (C1)
 - Portuguese (A2)
-  
-## 📚 Education
-
-- Enrolled in Harvard's CS50x
-- Class of 2024 at Escuela Nacional Preparatoria (ENP) - UNAM.
 
 ## 🧑🏼‍💻 Awards and Recognition
 - Winner of the "Best use of Google Cloud" challenge at HeroHacks II
 - Winner of the "Mom's Spaghetti" challenge at Hack or Treat II
-- Finalist in the iWeek Hackathon organized by the innovation department of Chihuahua, Mexico
+- Winner of Third Overall and Hack for the Future at HackBatttle: React vs Angular
 
 ## ⚡ Skills
 
