@@ -13,7 +13,7 @@ const notPlaying = () =>
       status: 200,
       headers: {
         "Content-Type": "application/json",
-        "cache-control": "public, s-maxage=60, stale-while-revalidate=30"
+        "cache-control": "public, s-maxage=60, stale-while-revalidate=30",
       },
     }
   );

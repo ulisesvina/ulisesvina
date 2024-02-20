@@ -1,6 +1,18 @@
 import nodemailer from "nodemailer";
 
 const handler = async (req, res) => {
+  if (
+    !req.body.token ||
+    !req.body.name ||
+    !req.body.email ||
+    !req.body.message
+  ) {
+    return res.status(400).json({
+      message: "Missing fields",
+      success: false,
+    });
+  }
+
   const data = await fetch(
     `https://www.google.com/recaptcha/api/siteverify?secret=${process.env["RECAPTCHA_SECRET_KEY"]}&response=${req.body.token}`,
     {
@@ -23,17 +35,29 @@ const handler = async (req, res) => {
 
     let info = await transporter.sendMail({
       from: `"Contact Form" <${process.env["EMAIL_USER"]}>`,
-      to: "contacto@ulisesvina.me",
+      to: "hello@ulisesv.com",
       subject: "New inquiry from contact form.",
-      html: req.body.message.replace(/</g, "&lt;").replace(/>/g, "&gt;"),
+      html:
+        "Inquiry from <b>" +
+        req.body.name +
+        "</b> (" +
+        req.body.email +
+        ") at " +
+        new Date().toLocaleString("en-US", {
+          timeZone: "America/Mexico_City",
+        }) +
+        "<br><br>" +
+        req.body.message.replace(/</g, "&lt;").replace(/>/g, "&gt;"),
     });
 
     return res.status(200).json({
       message: "Email sent",
+      success: true,
     });
   }
   return res.status(400).json({
     message: "Invalid token",
+    success: false,
   });
 };
 

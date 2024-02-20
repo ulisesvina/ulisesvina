@@ -1,17 +1,17 @@
 import About from "@/components/Main/About";
-import Awards from "@/components/Main/Awards";
-import Fitness from "@/components/Main/Fitness";
+import Achievements from "@/components/Main/Achievements";
 import Music from "@/components/Main/Music";
 import Projects from "@/components/Main/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home({ sortedRepos }) {
   return (
-    <div className="grid lg:grid-cols-2 gap-6">
+    <div className="md:pt-10 grid lg:grid-cols-2 gap-6">
       <About />
       <Music />
-      <Fitness />
-      <Awards />
-      <Projects sortedRepos={sortedRepos}/>
+      <Achievements />
+      <Contact />
+      <Projects sortedRepos={sortedRepos} />
     </div>
   );
 }

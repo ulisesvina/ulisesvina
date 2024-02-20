@@ -1,21 +1,27 @@
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
+
 const Blog = ({ data }) => {
   return (
     <div className="container">
-      <p className="text-3xl mb-10">Blog</p>
-      {data.map((article, index) => (
-        <div
-          key={index}
-          className="w-full secondary-bg secondary-text rounded p-4 my-5"
-        >
-          <h3 className="text-xl">{article.title}</h3>
-          <p className="text-sm mb-2">{article.description}</p>
-          <a href={article.url} target="_blank" rel="noopener noreferrer">
-            <button className="hover:underline mt-4 p-2 rounded-md bg-primary tertiary-text tertiary-bg w-full">
-              Read more...
-            </button>
-          </a>
-        </div>
-      ))}
+      <h1 className="text-md uppercase font-bold text-primary-text">Blog</h1>
+      <div className="grid lg:grid-cols-2 gap-2 mt-3">
+        {data.map((article, index) => (
+          <div
+            key={index}
+            className="flex flex-col align-middle w-full secondary-bg secondary-text rounded-xl p-4 h-full"
+          >
+            <h3 className="text-xl">{article.title}</h3>
+            <p className="text-sm mb-2 h-full">{article.description}</p>
+            <a href={article.url} target="_blank" rel="noopener noreferrer">
+              <button className="hover:underline mt-4 p-2 rounded-md bg-primary tertiary-text tertiary-bg w-full">
+                <span>
+                  Read more <FaRegArrowAltCircleRight className="inline" />
+                </span>
+              </button>
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

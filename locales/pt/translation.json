@@ -1,0 +1,22 @@
+{
+  "home": "Início",
+  "contact": "Contato",
+  "about": "Sobre mim",
+  "semblance": "Me chamo Ulises, sou um entusiasta da tecnologia e ciência que tem ajudado a desenvolver ferramentas para levar o software a todos. Tenho {{age}} anos; nasci e cresci no México 🇲🇽 e sou estudante ativo da Universidade Nacional Autônoma do México (UNAM).",
+  "resume": "Baixa meu currículo",
+  "listening": "Estou ouvindo 🎵",
+  "achievements": "Conquistas",
+  "hackathons": "Ganhador de 3 hackathons",
+  "conference": "Palestrante na Escuela Nacional Preparatoria da UNAM para segurança cibernética e presença online segura",
+  "hackathonorg": "Organizador (Desenvolvedor Web e Co-Líder) na ClockHacks",
+  "workshop": "Organizador de um workshop de introdução à desenvolvimento web na Escuela Nacional Preparatoria e ClockHacks",
+  "footer": "Feito com ❤️ em México",
+  "license": "Licenciado sob a",
+  "nothing": "Não estou ouvindo nada no momento",
+  "404": "Isso é estranho. Parece que você não deveria estar por aqui de qualquer maneira ;).",
+  "projects": "Projetos (Descrição em inglês)",
+  "time": "São {{time}} na Cidade do México.",
+  "name": "Nome",
+  "message": "Mensagem",
+  "send": "Enviar"
+}

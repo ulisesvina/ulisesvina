@@ -1,100 +1,78 @@
 import { createContext, useState, useEffect, useContext } from "react";
-import ColorThief from "../node_modules/colorthief/dist/color-thief.mjs";
+import ColorThief from "colorthief/dist/color-thief.mjs";
 
 export const MusicContext = createContext();
 
 export const useMusic = () => useContext(MusicContext);
 
+const getPaletteFromImage = async (imageSrc) => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const colorThief = new ColorThief();
+
+    img.crossOrigin = "Anonymous";
+    img.src = imageSrc;
+
+    img.addEventListener("load", () => {
+      try {
+        const palette = colorThief.getPalette(img);
+        resolve(palette);
+      } catch (error) {
+        reject(error);
+      }
+    });
+
+    img.addEventListener("error", (error) => reject(error));
+  });
+};
+
+const calculateTextColor = (color) =>
+  color[0] * 0.299 + color[1] * 0.587 + color[2] * 0.114 > 180 ? "#000" : "#fff";
+
 export const MusicProvider = ({ children }) => {
   const [music, setMusic] = useState({ isPlaying: false });
 
-  const musicLogic = () => {
-    fetch("/api/now-playing")
-      .then((res) => res.json())
-      .then((data) => {
-        if (!data.isPlaying) return;
+  const fetchNowPlaying = async () => {
+    try {
+      const response = await fetch("/api/now-playing");
+      const data = await response.json();
 
-        console.log(data);
+      if (!data.isPlaying) return setMusic({ isPlaying: false });
 
-        const img = new Image(),
-          colorthief = new ColorThief();
+      const palette = await getPaletteFromImage(data.albumImage);
 
-        img.crossOrigin = "Anonymous";
-        img.src = data.albumImage;
-        img.addEventListener("load", () => {
-          try {
-            const palette = colorthief.getPalette(img);
+      const [primaryColor, secondaryColor, tertiaryColor] = palette;
 
-            const primaryBg = `rgb(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]})`,
-              secondaryBg = `rgb(${palette[1][0]}, ${palette[1][1]}, ${palette[1][2]})`,
-              tertiaryBg = `rgb(${palette[2][0]}, ${palette[2][1]}, ${palette[2][2]})`,
-              primaryText =
-                palette[0][0] * 0.299 +
-                  palette[0][1] * 0.587 +
-                  palette[0][2] * 0.114 >
-                180
-                  ? "#000"
-                  : "#fff",
-              secondaryText =
-                palette[1][0] * 0.299 +
-                  palette[1][1] * 0.587 +
-                  palette[1][2] * 0.114 >
-                180
-                  ? "#000"
-                  : "#fff",
-              tertiaryText =
-                palette[2][0] * 0.299 +
-                  palette[2][1] * 0.587 +
-                  palette[2][2] * 0.114 >
-                180
-                  ? "#000"
-                  : "#fff";
+      const primaryBg = `rgb(${primaryColor.join(", ")})`;
+      const secondaryBg = `rgb(${secondaryColor.join(", ")})`;
+      const tertiaryBg = `rgb(${tertiaryColor.join(", ")})`;
 
-            document.documentElement.style.setProperty(
-              "--primaryBgColor",
-              primaryBg
-            );
-            document.documentElement.style.setProperty(
-              "--secondaryBgColor",
-              secondaryBg
-            );
-            document.documentElement.style.setProperty(
-              "--primaryTextColor",
-              primaryText
-            );
-            document.documentElement.style.setProperty(
-              "--secondaryTextColor",
-              secondaryText
-            );
-            document.documentElement.style.setProperty(
-              "--tertiaryTextColor",
-              tertiaryText
-            );
-            document.documentElement.style.setProperty(
-              "--tertiaryBgColor",
-              tertiaryBg
-            );
+      const primaryTextColor = calculateTextColor(primaryColor);
+      const secondaryTextColor = calculateTextColor(secondaryColor);
+      const tertiaryTextColor = calculateTextColor(tertiaryColor);
 
-            setMusic({
-              ...data,
-              primaryBg: `${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]}`,
-            });
-          } catch (e) {
-            console.log(e);
-          }
-        });
+      document.documentElement.style.setProperty("--primaryBgColor", primaryBg);
+      document.documentElement.style.setProperty("--secondaryBgColor", secondaryBg);
+      document.documentElement.style.setProperty("--primaryTextColor", primaryTextColor);
+      document.documentElement.style.setProperty("--secondaryTextColor", secondaryTextColor);
+      document.documentElement.style.setProperty("--tertiaryTextColor", tertiaryTextColor);
+      document.documentElement.style.setProperty("--tertiaryBgColor", tertiaryBg);
+
+      setMusic({
+        ...data,
+        primaryBg: primaryColor.join(", "),
       });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
-    musicLogic();
-    const interval = setInterval(() => {
-      musicLogic();
-    }, 30000);
+    fetchNowPlaying();
+    const interval = setInterval(fetchNowPlaying, 30000);
+
     return () => clearInterval(interval);
   }, []);
 
-  return (
-    <MusicContext.Provider value={{ music }}>{children}</MusicContext.Provider>
-  );
+  return <MusicContext.Provider value={{ music }}>{children}</MusicContext.Provider>;
 };

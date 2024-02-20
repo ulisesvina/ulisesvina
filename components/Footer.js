@@ -1,50 +1,57 @@
-import { BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
-
-import Links from "@/components/Links";
+import { BsInstagram, BsGithub } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
-    <footer className="bottom-0 w-screen p-2 md:p-3 text-center mt-10 secondary-bg secondary-text">
-      <div className="md:flex md:items-center md:justify-between">
-        <span className="text-sm sm:text-center">
+    <footer className="bottom-0 w-screen p-2 md:p-3 text-center mt-10 bg-secondary text-secondary-text">
+      <div className="grid grid-cols-2">
+        <div className="w-full">
           © {new Date().getFullYear() + " "}
           Ulises Viña.
-        </span>
-        <span>Made with ❤️ in Mexico.</span>
-        <Links />
+        </div>
+        <div className="w-full">{t("footer")}</div>
       </div>
-      <div className="mt-2 text-sm">
-        Licensed under the GNU General Public License version 3.0.
-        <ul className="mt-2">
-          <li className="inline-block p-2">
-            <a
-              href="https://instagram.com/ulisesvina"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <BsInstagram className="icon" size={15} />
-            </a>
-          </li>
-          <li className="inline-block p-2">
-            <a
-              href="https://twitter.com/ulisesvina"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <BsTwitter className="icon" size={15} />
-            </a>
-          </li>
-          <li className="inline-block p-2">
-            <a
-              href="https://github.com/ulisesvina"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <BsGithub className="icon" size={15} />
-            </a>
-          </li>
-        </ul>
-      </div>
+      <p className="my-2 text-xs">
+        {t("license")} {" "}
+        <a
+          target="_BLANK"
+          href="https://github.com/ulisesvina/ulisesvina/blob/master/LICENSE"
+        >
+          <span className="underline">GNU General Public License 3.0</span>
+        </a>
+      </p>
+      <ul>
+        <li className="inline-block p-2">
+          <a
+            href="https://instagram.com/ulisesvina"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <BsInstagram className="icon" size={20} />
+          </a>
+        </li>
+        <li className="inline-block p-2">
+          <a
+            href="https://twitter.com/ulisesvina"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <FaXTwitter className="icon" size={15} />
+          </a>
+        </li>
+        <li className="inline-block p-2">
+          <a
+            href="https://github.com/ulisesvina"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <BsGithub className="icon" size={20} />
+          </a>
+        </li>
+      </ul>
     </footer>
   );
 };

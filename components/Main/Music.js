@@ -1,28 +1,30 @@
+import { useTranslation } from "react-i18next";
 import { useMusic } from "@/context/MusicProvider";
 
 const Music = () => {
   const { music } = useMusic();
+  const { t } = useTranslation();
 
   return (
     <div
-      className="flex flex-col justify-center items-center p-6 rounded-xl w-full secondary-text"
+      className="flex flex-col justify-center items-center p-6 rounded-xl w-full text-secondary-text"
       style={{
-        backgroundRepeat: "no-repeat",
         background: music.isPlaying
           ? `url(${music.albumImage})`
           : "var(--secondaryBgColor)",
-        backgroundPosition: music.isPlaying ? "center" : "",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div
         className="p-2 rounded-lg backdrop-blur-sm text-center max-w-full"
         styles={{ background: `rgba(${music.primaryBg}, 0.5)` }}
       >
-        <h1 className="text-2xl">🎸 Music</h1>
+        <h1 className="text-xl md:text-2xl">{t("listening")}</h1>
         <p>
           {music.isPlaying ? (
             <span>
-              <b>Now playing:</b> {music.songName} by {music.artist}
+              {music.songName} - {music.artist}
               <br />
             </span>
           ) : (

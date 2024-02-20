@@ -3,17 +3,38 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Agave";
+  font-family: "Nunito";
   font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Agave.ttf") format("truetype");
+  font-weight: 1 1000;
+  src: url("/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
   font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url("/fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url("/fonts/NotoColorEmoji-Regular.ttf") format("truetype");
+  font-display: swap;
+
+}
+
+.emoji {
+  font-family: "Noto Color Emoji";
 }
 
 :root {
   max-width: 1100px;
-  font-family: "Agave";
-  font-size: 20px;
+  font-family: "Nunito";
+  font-size: 18px;
   --primaryBgColor: #000;
   --primaryTextColor: #fff;
   --secondaryBgColor: #161616;
@@ -48,6 +69,10 @@ body {
   background: var(--primaryBgColor);
 }
 
+.primary-bg:hover {
+  background: var(--primaryBgColor);
+}
+
 .secondary-text {
   color: var(--secondaryTextColor);
 }
@@ -56,10 +81,18 @@ body {
   background: var(--secondaryBgColor);
 }
 
+.secondary-bg:hover {
+  background: var(--secondaryBgColor);
+}
+
 .tertiary-text {
   color: var(--tertiaryTextColor);
 }
 
 .tertiary-bg {
+  background: var(--tertiaryBgColor);
+}
+
+.tertiary-bg:hover {
   background: var(--tertiaryBgColor);
 }
