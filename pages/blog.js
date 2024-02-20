@@ -13,7 +13,7 @@ const Blog = ({ data }) => {
             <h3 className="text-xl">{article.title}</h3>
             <p className="text-sm mb-2 h-full">{article.description}</p>
             <a href={article.url} target="_blank" rel="noopener noreferrer">
-              <button className="hover:underline mt-4 p-2 rounded-md bg-primary tertiary-text tertiary-bg w-full">
+              <button className="hover:underline mt-4 p-2 rounded-md bg-tertiary text-tertiary-text hover:bg-primary hover:text-primary-text w-full">
                 <span>
                   Read more <FaRegArrowAltCircleRight className="inline" />
                 </span>
