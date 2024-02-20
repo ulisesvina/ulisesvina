@@ -5,7 +5,7 @@ const About = () => {
   const calcAge = () =>
     ((new Date() - new Date("2006-08-09")) / 31557600000).toFixed(9);
   
-  const [age, setAge] = useState(calcAge());
+  const [age, setAge] = useState(17);
   const { t } = useTranslation();
 
   useEffect(() => {

@@ -8,18 +8,18 @@ const Music = () => {
   return (
     <div
       className="flex flex-col justify-center items-center p-6 rounded-xl w-full text-secondary-text"
-      style={{
-        background: music.isPlaying
-          ? `url(${music.albumImage})`
-          : "var(--secondaryBgColor)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      style={
+        music.isPlaying
+          ? {
+              background: `url(${music.albumImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }
+          : { backgroundColor: "var(--secondaryBgColor)" }
+      }
     >
-      <div
-        className="p-2 rounded-lg backdrop-blur-sm text-center max-w-full"
-        styles={{ background: `rgba(${music.primaryBg}, 0.5)` }}
-      >
+      <div className="p-2 rounded-lg backdrop-blur-sm text-center max-w-full">
         <h1 className="text-xl md:text-2xl">{t("listening")}</h1>
         <p>
           {music.isPlaying ? (
