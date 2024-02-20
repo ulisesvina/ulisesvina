@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const custom500 = () => {
+const Custom500 = () => {
   useEffect(() => {
     location.href = "/";
   }, []);
@@ -12,4 +12,4 @@ const custom500 = () => {
   );
 };
 
-export default custom500;
+export default Custom500;

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const custom404 = () => {
+const Custom404 = () => {
   const { t } = useTranslation();
 
   return (
@@ -11,4 +11,4 @@ const custom404 = () => {
   );
 };
 
-export default custom404;
+export default Custom404;

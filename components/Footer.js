@@ -19,6 +19,7 @@ const Footer = () => {
         <a
           target="_BLANK"
           href="https://github.com/ulisesvina/ulisesvina/blob/master/LICENSE"
+          rel="noreferrer"
         >
           <span className="underline">GNU General Public License 3.0</span>
         </a>
