@@ -45,8 +45,8 @@ const LanguageSelector = () => {
             onClick={() => chooseLanguage(lang)}
             className={`${
               lang === selectedLanguage
-                ? "bg-tertiary text-tertiary-text"
-                : "bg-primary text-primary-text hover:px-3 hover:bg-tertiary"
+                ? "bg-primary text-primary-text"
+                : "bg-tertiary text-tertiary-text hover:px-3 hover:bg-primary"
             } py-1 px-2 rounded-lg mx-1 transition-all duration-500 ease-in-out`}
           >
             {lang === selectedLanguage && (isAtTop || isMobile) ? (
