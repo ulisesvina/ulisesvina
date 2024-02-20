@@ -23,7 +23,7 @@ const About = () => {
       <a
         href="/Resume.pdf"
         target="_blank"
-        className="block mt-5 bg-tertiary text-tertiary-text w-full rounded text-center text-lg p-2 hover:bg-secondary hover:text-secondary-text"
+        className="block mt-5 bg-tertiary text-tertiary-text w-full rounded text-center text-lg p-2 hover:bg-primary hover:text-primary-text"
       >
         {t("resume")}
       </a>
