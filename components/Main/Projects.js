@@ -10,7 +10,7 @@ const Projects = ({ sortedRepos }) => {
         {sortedRepos.map((repo) => (
           <li
             key={repo.id}
-            className="p-4 h-full rounded-xl bg-tertiary text-tertiary-text"
+            className="p-4 h-full rounded-xl bg-tertiary text-tertiary-text hover:bg-primary hover:text-primary-text"
             style={{ display: "grid", gridTemplateColumns: "1fr auto" }}
           >
             <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
