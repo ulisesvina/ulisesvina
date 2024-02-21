@@ -8,7 +8,7 @@ const Blog = ({ data }) => {
         {data.map((article, index) => (
           <div
             key={index}
-            className="flex flex-col align-middle w-full bv-secondary text-secondary-text rounded-xl p-4 h-full"
+            className="flex flex-col align-middle w-full bg-secondary text-secondary-text rounded-xl p-4 h-full"
           >
             <h3 className="text-xl">{article.title}</h3>
             <p className="text-sm mb-2 h-full">{article.description}</p>
