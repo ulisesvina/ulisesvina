@@ -24,16 +24,13 @@
   font-weight: 1 1000;
   src: url("/fonts/NotoColorEmoji-Regular.ttf") format("truetype");
   font-display: swap;
-
-}
-
-.emoji {
-  font-family: "Noto Color Emoji";
+  unicode-range: U+1F1FA, U+1F1F8, U+1F1F2, U+1F1FD, U+1F1E7, U+1F1F7,
+    U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF, U+2700-27BF, U+2B50;
 }
 
 :root {
   max-width: 1100px;
-  font-family: "Nunito";
+  font-family: "Noto Color Emoji" "Nunito";
   font-size: 18px;
   --primaryBgColor: #000;
   --primaryTextColor: #fff;
@@ -65,34 +62,20 @@ body {
   color: var(--primaryTextColor);
 }
 
-.primary-bg {
-  background: var(--primaryBgColor);
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--tertiaryBgColor) var(--tertiaryTextColor);
 }
 
-.primary-bg:hover {
-  background: var(--primaryBgColor);
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-.secondary-text {
-  color: var(--secondaryTextColor);
+::-webkit-scrollbar-thumb {
+  background-color: var(--tertiaryBgColor);
+  border-radius: 6px;
 }
 
-.secondary-bg {
-  background: var(--secondaryBgColor);
-}
-
-.secondary-bg:hover {
-  background: var(--secondaryBgColor);
-}
-
-.tertiary-text {
-  color: var(--tertiaryTextColor);
-}
-
-.tertiary-bg {
-  background: var(--tertiaryBgColor);
-}
-
-.tertiary-bg:hover {
-  background: var(--tertiaryBgColor);
+::-webkit-scrollbar-track {
+  background-color: var(--tertiaryTextColor);
 }
