@@ -19,7 +19,7 @@ export default function Home({ sortedRepos }) {
 export async function getServerSideProps() {
   const resRepos = await fetch("https://api.github.com/users/ulisesvina/repos"),
     repos = await resRepos.json(),
-    sortedRepos = repos
+    sortedRepos = repos?
       .sort((a, b) => {
         const aStarsAndForks = a.stargazers_count + a.forks_count;
         const bStarsAndForks = b.stargazers_count + b.forks_count;
@@ -29,7 +29,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      sortedRepos,
+      sortedRepos || [],
     },
   };
 }
