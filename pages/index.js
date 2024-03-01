@@ -28,7 +28,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      sortedRepos || [],
+      sortedRepos: sortedRepos || [],
     },
   };
 }
