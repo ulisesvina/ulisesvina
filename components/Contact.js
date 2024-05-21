@@ -10,7 +10,7 @@ const Contact = () => {
       hour: "2-digit",
       minute: "2-digit",
       hour12: true,
-      timeZone: "America/Hermosillo",
+      timeZone: "America/Mexico_City",
     });
 
   const handleSubmit = async (e) => {
