@@ -3,16 +3,21 @@ import { useEffect, useState } from "react";
 
 const About = () => {
   const calcAge = () => {
-    const today = new Date();
-    const birthDate = new Date("2006-08-09");
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
-    return age;
-};
-
+      const today = new Date();
+      const birthDate = new Date("2006-08-09");
+      let age = today.getFullYear() - birthDate.getFullYear();
+      
+      const isBirthdayPassedThisYear = 
+          today.getMonth() > birthDate.getMonth() || 
+          (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+      
+      if (!isBirthdayPassedThisYear) {
+          age--;
+      }
+  
+      return age;
+  };
+  
   const [age, setAge] = useState(calcAge());
   const { t } = useTranslation();
 
