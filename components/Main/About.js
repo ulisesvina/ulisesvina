@@ -2,10 +2,18 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 
 const About = () => {
-  const calcAge = () =>
-    ((new Date() - new Date("2006-08-09")) / 31557600000).toFixed(9);
-  
-  const [age, setAge] = useState(17);
+  const calcAge = () => {
+    const today = new Date();
+    const birthDate = new Date("2006-08-09");
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+};
+
+  const [age, setAge] = useState(calcAge());
   const { t } = useTranslation();
 
   useEffect(() => {
