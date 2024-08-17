@@ -1,6 +1,6 @@
 ## 👾 Introduction
 
-Hi there! My name is Ulises. I am a 17-years-old fullstack developer, passionate hackathon tryhard and high school student at the National Autonomous University of Mexico. I am mostly into IT, networking, low-level and webdev, but I also enjoy embedded systems, CV and AI.
+Hi there! My name is Ulises. I am an 18 year old fullstack developer, passionate hackathon tryhard and high school student at the National Autonomous University of Mexico. I am mostly into IT, networking, low-level and webdev, but I also enjoy embedded systems, CV and AI.
 
 In my spare time, I enjoy starting new projects on GitHub and can be reached via email <contacto@ulisesvina.me> and [LinkedIn](https://www.linkedin.com/in/ulises-vi%C3%B1a-20ba61203/)
 
