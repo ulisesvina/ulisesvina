@@ -1,16 +1,11 @@
-## Hi there 👋
-
-<!--
-**ulisesvina/ulisesvina** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<p align="center">
+  <samp>
+    i'm ulises, a c.s. student @ UNAM
+    <br/>
+    you can reach out through <a href="https://linkedin.com/in/ulisesvina">linkedin</a> or my email <a href="mailto:ulisesv@ciencias.unam.mx">ulisesv@ciencias.unam.mx</a>
+    <br/><br/>
+    💬 pronouns: he/him<br/>
+    🌱 learning: neural networks, perceptron-based learning<br/>
+    ⚡️ fun fact: i'm learning korean (저는 한국어를 배우고 있어요)
+  </samp>
+</p>
